@@ -7,7 +7,7 @@
       <div>
         <div class="form-group">
           <label>Formula:</label>
-          <textarea class="form-control mb-2" v-model="fomula"></textarea>
+          <textarea class="form-control mb-2" v-model="formula"></textarea>
         </div>
         <div class="text-center">
           <button class="btn btn-primary" v-on:click="doAction">CALC</button>
@@ -26,12 +26,12 @@ export default {
   data() {
     return {
       message: 'Enter expression:',
-      fomula: '0',
+      formula: '0',
     }
   },
   methods:{
     doAction() {
-      let arr = this.fomula.trim().split('\n')
+      let arr = this.formula.trim().split('\n')
       let last = arr.pop()
       let fn = ''
       for(let n in arr ) {
